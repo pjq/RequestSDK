@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    
+    <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:visibility="gone">
+
+	    <TextView 
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="API Account:"/> 
+	    
+		<EditText
+			android:id="@+id/main_account_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:imeOptions="actionNext"
+	        android:maxLength="2000"/>
+	</LinearLayout>
+	
+    <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip">
+
+	    <TextView 
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="Login:"
+	    /> 
+	    
+		<EditText
+			android:id="@+id/main_caller_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:imeOptions="actionNext"
+	        android:inputType="textNoSuggestions"
+	        android:maxLength="2000"/>
+	</LinearLayout>
+
+    <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip">
+
+	    <TextView 
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="Password:"/> 
+	    
+		<EditText
+			android:id="@+id/main_caller_pass_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:password="true"
+	        android:imeOptions="actionNext"
+	        android:inputType="textNoSuggestions"
+	        android:maxLength="2000"/>
+	</LinearLayout>
+	<!-- 
+	<LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+
+	    <TextView 
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="CLS:"/> 
+	    <EditText
+			android:id="@+id/cls_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:imeOptions="actionNext"
+	        android:maxLength="2000"/>
+	</LinearLayout>
+     -->
+    <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip">
+
+	    <TextView android:id="@+id/main_callee_text_label"
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="Address:"
+	    android:visibility="gone"/> 
+	    
+
+		<EditText
+			android:id="@+id/main_callee_text"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:imeOptions="actionNext"
+	        android:maxLength="2000"
+	        android:visibility="gone"
+	        android:text="VS1"
+	        android:inputType="textNoSuggestions"/>
+
+	</LinearLayout>
+	 <LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+
+	    <TextView android:id="@+id/main_video_codec_text_label"
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="Video Codec:"
+	    android:visibility="gone"/> 
+	    
+	    <Spinner
+			android:id="@+id/video_codec"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:visibility="gone"/>
+	</LinearLayout>
+ 	<LinearLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+
+	    <TextView android:id="@+id/main_audio_codec_text_label"
+	    android:layout_width="100dp" 
+	    android:layout_height="wrap_content" 
+	    android:text="Audio Codec:"
+	    android:visibility="gone"/> 
+	    
+	    <Spinner
+			android:id="@+id/audio_codec"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:visibility="gone"/>
+	</LinearLayout>
+	 
+	 
+	 <Button
+    	android:id="@+id/main_call_video_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="10dp"
+    	android:text="Video Call"
+    	android:onClick="onCallClick"
+    	android:visibility="gone"
+    	/>
+
+    <Button
+    	android:id="@+id/main_call_voice_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="10dp"
+    	android:text="Voice Call"
+    	android:onClick="onCallClick"
+    	android:visibility="gone"
+    	/>
+    	
+     <Button
+    	android:id="@+id/main_login_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_margin="10dp"
+    	android:text="Login"
+    	android:onClick="onLoginClick"
+    	/>
+
+</LinearLayout>

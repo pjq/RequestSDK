@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ZenonSDK">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="D:/Development/ZMobile/ZMobile/Apps/ZSip/Android/v5/ZenonSDK.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.zenon.sdk.MainActivity"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <zipfileset excludes="META-INF/*.SF" src="D:/Development/ZMobile/ZMobile/Apps/ZSip/Android/v5/ZenonSDK/libs/openmarket-softphone.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="D:/Development/ZMobile/ZMobile/Apps/ZSip/Android/v5/ZenonSDK/libs/gcm.jar"/>
+            <fileset dir="D:/Development/ZMobile/ZMobile/Apps/ZSip/Android/v5/ZenonSDK/bin/classes"/>
+        </jar>
+    </target>
+</project>

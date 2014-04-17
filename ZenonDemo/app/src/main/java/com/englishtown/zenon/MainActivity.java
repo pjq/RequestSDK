@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
      
         mCallerText.setText(getString(R.string.test_name));
         mCallerPassText.setText(getString(R.string.test_password));
-        mCalleeText.setText("pengjianqing@gmail.com");
+        mCalleeText.setText(getString(R.string.test_connect_name));
 		mPM.start(this);
         settings.set(SettingItemNames.settings_cls.toString(),this.getString(R.string.default_cls));
         settings.set(SettingItemNames.settings_servicename.toString(),this.getString(R.string.servicename));
@@ -211,7 +211,7 @@ public class MainActivity extends Activity {
 		                mCallerText.setEnabled(false);
 		                mCallerPassText.setEnabled(false);
 		                ((TextView)findViewById(R.id.main_callee_text_label)).setVisibility(View.VISIBLE);
-		                mCalleeText.setText("VS1");
+		                mCalleeText.setText(getString(R.string.test_connect_name));
 		                  			
 		            }
 	    		}

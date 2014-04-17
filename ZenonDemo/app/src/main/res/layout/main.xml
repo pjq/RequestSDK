@@ -101,7 +101,7 @@
 	    android:layout_width="100dp" 
 	    android:layout_height="wrap_content" 
 	    android:text="Address:"
-	    android:visibility="gone"/> 
+	    android:visibility="visible"/>
 	    
 
 		<EditText
@@ -111,8 +111,8 @@
 	        android:singleLine="true"
 	        android:imeOptions="actionNext"
 	        android:maxLength="2000"
-	        android:visibility="gone"
-	        android:text="VS1"
+	        android:visibility="visible"
+	        android:text=""
 	        android:inputType="textNoSuggestions"/>
 
 	</LinearLayout>

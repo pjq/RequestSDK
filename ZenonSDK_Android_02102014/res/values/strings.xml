@@ -2,7 +2,21 @@
 <resources>
     <string name="hello">Hello World, ZenonSDK!</string>
     <string name="app_name">ZenonSDK</string>
+     <!--  
     <string name="default_cls">https://cloudroom.saypage.com</string>
     <string name="text_partner">cloudroom</string>
     <string name="servicename">saypage</string>
+     
+    <string name="default_cls2">https://classroom-qacn-02.englishtown.com</string>
+       <string name="test_name">Jianqing.Peng@ef.com</string>
+       <string name="test_password">tongrenlu</string>
+     -->
+   
+    <string name="default_cls">https://classroom-qacn-02.englishtown.com/</string>
+    <string name="text_partner">cloudroom</string>
+    <string name="servicename">saypage</string>
+        <string name="test_name">test1@ef.com</string>
+       <string name="test_password">pass1234</string>
+      
+    
 </resources>

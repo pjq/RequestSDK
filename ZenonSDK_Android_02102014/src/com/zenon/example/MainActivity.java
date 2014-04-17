@@ -80,9 +80,9 @@ public class MainActivity extends Activity {
         mCallVideoButton =   (Button)findViewById(R.id.main_call_video_button);
         mCallVoiceButton =   (Button)findViewById(R.id.main_call_voice_button);
      
-        mCallerText.setText("");
-        mCallerPassText.setText("");
-        mCalleeText.setText("");
+        mCallerText.setText(getString(R.string.test_name));
+        mCallerPassText.setText(getString(R.string.test_password));
+        mCalleeText.setText("pengjianqing@gmail.com");
 		mPM.start(this);
         settings.set(SettingItemNames.settings_cls.toString(),this.getString(R.string.default_cls));
         settings.set(SettingItemNames.settings_servicename.toString(),this.getString(R.string.servicename));

@@ -1,0 +1,93 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile 'com.android.support:appcompat-v7:19.0.0'
+    //compile project(':libraries:slidingmenu')
+
+
+    compile files(
+            'libs/square-otto-1.3.2.jar',
+            //'libs/android-support-v4.jar',
+            //'libs/libGoogleAnalyticsServicesV3.jar',
+            //'libs/libaorte.jar',
+            //'libs/jgroups-3.4.1.Final.jar',
+            'libs/ZenonSDK.jar',
+    )
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        versionName "1.0.0"
+        versionCode 1
+        minSdkVersion 8
+        targetSdkVersion 18
+        packageName "com.englishtown.zenon"
+    }
+
+    signingConfigs {
+        releaseConfig {
+            storeFile file("zenon.keystore")
+            storePassword "zenonef"
+            keyAlias "zenon"
+            keyPassword "zenonef"
+        }
+    }
+
+    buildTypes {
+        release {
+            runProguard true
+            proguardFile 'proguard-android-optimize.txt'
+            signingConfig signingConfigs.releaseConfig
+        }
+
+        debug {
+            runProguard false
+            proguardFile 'proguard-android-optimize.txt'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    productFlavors {
+        zenon{
+            packageName "com.englishtown.zenon"
+        }
+
+        zenonef{
+            packageName "com.englishtown.zenonef"
+        }
+    }
+}
+
+//task copyNativeLibs(type: Copy) {
+//    from(new File('libs')) { include '**' }
+//    into new File(buildDir, 'native-libs')
+//}
+//
+//tasks.withType(Compile) { compileTask -> compileTask.dependsOn copyNativeLibs }
+//
+//clean.dependsOn 'cleanCopyNativeLibs'
+
+//tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
+//    pkgTask ->pkgTask.jniDir new File(buildDir, 'native-libs')
+//}
+//
+//tasks.withType(com.android.build.gradle.tasks.PackageApplication) { pkgTask ->
+//    pkgTask.jniFolders = new HashSet<File>()
+//    pkgTask.jniFolders.add(new File(buildDir, 'native-libs'))
+//}
+

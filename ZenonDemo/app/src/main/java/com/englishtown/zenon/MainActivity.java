@@ -158,7 +158,13 @@ public class MainActivity extends Activity {
                     runOnUiThread(new Runnable() {
                         public void run() {
                             mCM.logout();
-                            ConnectionManager.logout();
+
+                            new Thread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    ConnectionManager.logout();
+                                }
+                            }).start();
                         }
                     });
 
@@ -196,7 +202,7 @@ public class MainActivity extends Activity {
                 if (b.getStringArray(EventDispatcher.LOGIN_RESULT) == null) {
                     if (dialog != null && dialog.isShowing()) dialog.dismiss();
                     Logger.info("intent.getAction() 2: " + intent.getAction());
-                    Toast.makeText(arg0, "Network Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(arg0, "Network Error\n" + intent.getAction(), Toast.LENGTH_SHORT).show();
                 } else {
                     final String[] loginUrlResponse = b.getStringArray(EventDispatcher.LOGIN_RESULT);
                     if (loginUrlResponse == null) {
@@ -223,7 +229,7 @@ public class MainActivity extends Activity {
             } else {
                 if (dialog != null && dialog.isShowing()) dialog.dismiss();
                 Logger.info("intent.getAction() 3: " + intent.getAction());
-                Toast.makeText(arg0, "Network Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(arg0, "Network Error\n" + intent.getAction(), Toast.LENGTH_SHORT).show();
             }
         }
     };

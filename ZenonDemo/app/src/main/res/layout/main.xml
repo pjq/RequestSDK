@@ -165,7 +165,7 @@
                 android:id="@+id/main_callee_text_label"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Address:"
+                android:text="Call Address:"
                 android:visibility="visible"/>
 
 
